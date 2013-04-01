@@ -11,7 +11,6 @@ public class SmackTest {
      */
     public static void main(String[] args) throws XMPPException {
         BOSHConfiguration conf = new BOSHConfiguration(false, "localhost", 5280, "/http-bind/", "panesar");
-        SASLAuthentication.supportSASLMechanism("SIMPLE", 0);
         BOSHConnection connection = new BOSHConnection(conf);
         connection.connect();
         connection.login(args[0], args[1]);
